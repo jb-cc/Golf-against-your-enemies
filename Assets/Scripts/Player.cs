@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void SetNewPosition(Vector3 newPosition)
