@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8040523840648347417}
   - component: {fileID: 4670953967262857734}
   - component: {fileID: 3074295648414795065}
+  - component: {fileID: 655591535220453954}
   m_Layer: 0
   m_Name: Golf Ball
   m_TagString: Untagged
@@ -124,3 +125,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b73a0138045b246b6ccfdcce341119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &655591535220453954
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8400710449431633612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.024999976
+  m_Center: {x: -0.0000000018626451, y: 0, z: 0}
