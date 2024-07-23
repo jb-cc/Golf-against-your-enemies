@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5471040b06d5b98428bb4cc07f41c49b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 69
 --- !u!1 &8368459371459444878
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +110,7 @@ GameObject:
   - component: {fileID: 9180990095280396852}
   - component: {fileID: 5244079253747553681}
   - component: {fileID: 8008034581167907163}
+  - component: {fileID: 1353433028283632578}
   m_Layer: 0
   m_Name: Windmill
   m_TagString: Untagged
@@ -183,3 +185,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1353433028283632578
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368459371459444878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -112859248700104106, guid: be64b6d79feedc74da89bb3f24935390, type: 3}
