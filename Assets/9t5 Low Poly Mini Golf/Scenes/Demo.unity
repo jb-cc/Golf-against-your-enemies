@@ -13475,6 +13475,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3074295648414795065, guid: 5066334a43f5fef41a319c95ea87056e, type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 2144790692}
+    - target: {fileID: 3074295648414795065, guid: 5066334a43f5fef41a319c95ea87056e, type: 3}
+      propertyPath: PlayerCamera
+      value: 
+      objectReference: {fileID: 1009176761}
     - target: {fileID: 8400710449431633612, guid: 5066334a43f5fef41a319c95ea87056e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16088,7 +16096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &564414183
 Transform:
   m_ObjectHideFlags: 0
@@ -21464,7 +21472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793076306}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14252497, y: 0.64643234, z: -0.124654844, w: 0.73910284}
+  m_LocalRotation: {x: 0.14252499, y: 0.64643234, z: -0.124654844, w: 0.73910284}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
