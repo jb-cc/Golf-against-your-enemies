@@ -126,6 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b73a0138045b246b6ccfdcce341119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerCamera: {fileID: 0}
+  MainCamera: {fileID: 0}
+  maxHitForce: 2
+  minHitForce: 0.1
+  dragSpeed: 0.1
 --- !u!135 &655591535220453954
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -133,7 +138,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8400710449431633612}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9eae4f179e8ec514889c867844a14ae8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -200,7 +205,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.046148147
+        value: 0.046157837
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -208,7 +213,7 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.14715075
         value: 0
         inSlope: 0
         outSlope: 0
