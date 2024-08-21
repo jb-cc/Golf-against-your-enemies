@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         // Set the player's position to the first course's start position to start the game
         if (player != null && courses.Length > 0)
         {

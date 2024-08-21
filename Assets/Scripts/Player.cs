@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private LineRenderer _lineRenderer;
     public CinemachineFreeLook PlayerCamera;
     public Camera MainCamera;
-    public float maxHitForce = 100f;
+    public float maxHitForce = 1f;
     public float minHitForce = 0.1f;
     public float dragSpeed = 0.1f; // Speed at which the force changes
     private float _currentHitForce;
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Debug.Log("Player Awake, Starting Position: " + transform.position);
     }
 
     private void Update()
@@ -93,7 +94,7 @@ public class Player : MonoBehaviour
             _currentHitForce = Mathf.Clamp(_currentHitForce, minHitForce, maxHitForce);
 
             // Debug log to check the clamped value
-            Debug.Log($"Current Hit Force: {_currentHitForce}, Clamped: {Mathf.Clamp(_currentHitForce, minHitForce, maxHitForce)}");
+            //Debug.Log($"Current Hit Force: {_currentHitForce}, Clamped: {Mathf.Clamp(_currentHitForce, minHitForce, maxHitForce)}");
 
             // Drawing a line from the player to the direction the camera is facing (set the end of the line to that direction)
             Vector3 cameraForward = MainCamera.transform.forward;

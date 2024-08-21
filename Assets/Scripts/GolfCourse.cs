@@ -9,6 +9,7 @@ public class GolfCourse : MonoBehaviour
     {
         StartPosition = transform.Find("Starting Mat").transform;
         StartPosition = StartPosition.transform.Find("StartPosition").transform;
+        Debug.Log("Start position: " + StartPosition.position);
     }
 }
 
