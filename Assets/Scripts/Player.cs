@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class Player : MonoBehaviour
 {
+    private GameManager _gameManager;
     private Rigidbody _rigidbody;
     private LineRenderer _lineRenderer;
     public CinemachineFreeLook PlayerCamera;
@@ -19,10 +20,11 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _rigidbody = GetComponent<Rigidbody>();
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.enabled = false;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked;
         Debug.Log("Player Awake, Starting Position: " + transform.position);
     }
 
@@ -32,8 +34,11 @@ public class Player : MonoBehaviour
         canShoot = _rigidbody.velocity.magnitude < 0.1f;
 
         if (!canShoot) return;
-
-        // set velocity and rotation to zero
+        
+        // Check if the player has reached the max number of hits, if yes, load next level
+        _gameManager.CheckMaxHits();
+        
+        //else, set velocity and rotation to zero
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
 
@@ -81,6 +86,7 @@ public class Player : MonoBehaviour
 
             Vector3 cameraForward = MainCamera.transform.forward;
             Vector3 hitDirection = new Vector3(cameraForward.x, 0, cameraForward.z) * _currentHitForce;
+            _gameManager.IncreaseHitCounter();
             _rigidbody.AddForce(hitDirection, ForceMode.Impulse);
         }
     }
