@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI hitCounterText;
     public int CurrentLevel { get; private set; } = 0;
-    public int TotalLevels { get; private set; } = 2;
+    public int TotalLevels { get; private set; } = 18;
     public bool GameWon { get; private set; } = false;
     public Dictionary<string, int> HitCounter { private set; get; } = new Dictionary<string, int>();
     public int maxHitsPerLevel = 12;
@@ -75,6 +75,8 @@ public class GameManager : MonoBehaviour
             WinGame();
             return;
         }
+        hitCounterText.text = "0";
+        
         SceneManager.LoadScene((CurrentLevel + 1).ToString());
         Debug.Log("Loading Level " + (CurrentLevel + 1));
         CurrentLevel++;
