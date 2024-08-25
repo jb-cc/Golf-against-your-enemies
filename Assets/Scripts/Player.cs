@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     private bool canShoot;
     private Vector3 initialFollowPosition;
     private Vector3 initialLookAtPosition;
+    private Vector3 lastStillStandingPosition;
 
     void Awake()
     {
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
         canShoot = _rigidbody.velocity.magnitude < 0.1f;
 
         if (!canShoot) return;
+        lastStillStandingPosition = transform.position;
         
         // Check if the player has reached the max number of hits, if yes, load next level
         _gameManager.CheckMaxHits();
@@ -112,5 +115,19 @@ public class Player : MonoBehaviour
             PlayerCamera.Follow.localPosition = new Vector3(PlayerCamera.Follow.localPosition.x, initialFollowPosition.y, PlayerCamera.Follow.localPosition.z);
             PlayerCamera.LookAt.localPosition = new Vector3(PlayerCamera.LookAt.localPosition.x, initialLookAtPosition.y, PlayerCamera.LookAt.localPosition.z);
         }
+    }
+
+    // Resetting the players position if it's outside the course and is standing still
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Course")) return;
+        transform.position = lastStillStandingPosition;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Course")) return;
+        _rigidbody.velocity = Vector3.zero;
+        transform.position = lastStillStandingPosition;
     }
 }
