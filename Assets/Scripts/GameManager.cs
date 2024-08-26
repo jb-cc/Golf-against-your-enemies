@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         
         
         // Initialize the hit counter for each level to 0
-        for (int i=0; i<TotalLevels; i++)
+        for (int i=1; i<=TotalLevels; i++)
         {
             HitCounter.Add("Level " + i, 0);
         }
@@ -71,7 +71,14 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("In StartGame(): Starting Game");
-        SceneManager.LoadScene("0");
+        SceneManager.LoadScene("1");
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void StartPractice()
+    {
+        Debug.Log("In StartPractice(): Starting Practice Level");
+        SceneManager.LoadScene("Practice");
     }
     
     public void QuitGame()
@@ -112,6 +119,10 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseHitCounter()
     {
+        if (SceneManager.GetActiveScene().name == "Practice")
+        {
+            return;
+        }
         if (!GameWon)
         {
             HitCounter["Level " + CurrentLevel] += 1;
