@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] scoreboardTexts;
     [SerializeField] private TextMeshProUGUI totalScoreText;
     [SerializeField] private TextMeshProUGUI hitCounterText;
-    public int CurrentLevel { get; private set; } = 0;
+    public int CurrentLevel { get; private set; } = 1;
     public int TotalLevels { get; private set; } = 13;
     public bool GameWon { get; private set; } = false;
     public Dictionary<string, int> HitCounter { private set; get; } = new Dictionary<string, int>();
@@ -53,6 +54,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("In Start(): GameManager Start, Start Menu Loaded");
             SceneManager.LoadScene("Menu");
             Debug.Log("In Start(): GameManager Awake, Menu Loaded");
+            _scoreboard.SetActive(false);
+
         }
     }
 
@@ -62,7 +65,7 @@ public class GameManager : MonoBehaviour
         {
             _scoreboard.SetActive(true); 
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.Tab))
         {
             _scoreboard.SetActive(false);
         }
@@ -100,12 +103,20 @@ public class GameManager : MonoBehaviour
             WinGame();
             return;
         }
+        
+        StartCoroutine(LoadNextLevel());
+    }
+    
+    IEnumerator LoadNextLevel()
+    {
+        _scoreboard.SetActive(true);
+        yield return new WaitForSeconds(2);
         hitCounterText.text = "0";
         
         SceneManager.LoadScene((CurrentLevel + 1).ToString());
         Debug.Log("Loading Level " + (CurrentLevel + 1));
         CurrentLevel++;
-        
+        _scoreboard.SetActive(false);
     }
 
     public void WinGame()
