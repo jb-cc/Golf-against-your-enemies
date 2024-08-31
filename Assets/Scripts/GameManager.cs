@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private GameObject _pauseMenu;
     private GameObject _strokeCounter;
     private GameObject _scoreboard;
+    private GameObject _levelSelectionMenu;
     private bool _gamePaused = false;
     [SerializeField] private TextMeshProUGUI[] scoreboardTexts;
     [SerializeField] private TextMeshProUGUI totalScoreText;
@@ -56,6 +57,9 @@ public class GameManager : MonoBehaviour
         if (_scoreboard == null)
             _scoreboard = _canvas.transform.Find("Scoreboard").gameObject;
 
+        if (_levelSelectionMenu == null)
+            _levelSelectionMenu = _canvas.transform.Find("LevelSelectionMenu").gameObject;
+
         DontDestroyOnLoad(this.gameObject);
         DontDestroyOnLoad(_eventSystem.gameObject);
         DontDestroyOnLoad(_canvas.gameObject);
@@ -78,6 +82,7 @@ public class GameManager : MonoBehaviour
             _scoreboard.SetActive(false);
             _pauseMenu.SetActive(false);
             _strokeCounter.SetActive(false);
+            _levelSelectionMenu.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
         }
         else
@@ -102,13 +107,20 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        _startMenu.SetActive(false);
+        _levelSelectionMenu.SetActive(true);
+        Time.timeScale = 1;
+    }
+
+    public void StartIslandsLevel()
+    {
         SceneManager.LoadScene("1");
+        _levelSelectionMenu.SetActive(false);
         _startMenu.SetActive(false);
         _strokeCounter.SetActive(true);
         _scoreboard.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
-
     public void StartPractice()
     {
         SceneManager.LoadScene("Practice");
