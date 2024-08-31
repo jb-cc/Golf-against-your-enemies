@@ -95,9 +95,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5756558726868475388}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0.1
-  m_AngularDrag: 0.05
+  m_Mass: 0.15
+  m_Drag: 0.25
+  m_AngularDrag: 0.8
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -113,7 +113,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &8696874179615116751
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5756558726868475388}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9eae4f179e8ec514889c867844a14ae8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -149,9 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCamera: {fileID: 0}
   MainCamera: {fileID: 0}
-  maxHitForce: 70
-  minHitForce: 1
-  dragSpeed: 1
+  maxHitForce: 5
+  minHitForce: 0.1
+  dragSpeed: 0.1
 --- !u!120 &2197040672410731922
 LineRenderer:
   serializedVersion: 2

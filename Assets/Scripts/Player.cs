@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
     public CinemachineFreeLook PlayerCamera;
     public Camera MainCamera;
     public float maxHitForce = 1f;
-    public float minHitForce = 0.1f;
-    public float dragSpeed = 0.1f; // Speed at which the force changes
+    public float minHitForce = 0.01f;
+    public float dragSpeed = 0.05f; // Speed at which the force changes
     private float _currentHitForce;
     private bool canShoot;
     private Vector3 initialFollowPosition;
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             initialLookAtPosition = PlayerCamera.LookAt.localPosition;
 
             // deactivate the player camera (no rotation)
-            PlayerCamera.enabled = false;
+            //PlayerCamera.enabled = false;
 
             // set the line renderer's start position to the player's position
             _lineRenderer.SetPosition(0, this.transform.position);
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         {
             // Adjust the hit force based on mouse movement
             _currentHitForce += Input.GetAxis("Mouse Y") * dragSpeed;
-            _currentHitForce = Mathf.Clamp(_currentHitForce, minHitForce, maxHitForce);
+            float actualHitForce = Mathf.Clamp(_currentHitForce, minHitForce, maxHitForce);
 
             // Debug log to check the clamped value
             //Debug.Log($"Current Hit Force: {_currentHitForce}, Clamped: {Mathf.Clamp(_currentHitForce, minHitForce, maxHitForce)}");
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
             // Drawing a line from the player to the direction the camera is facing (set the end of the line to that direction)
             Vector3 cameraForward = MainCamera.transform.forward;
             Vector3 playerPosition = this.transform.position;
-            Vector3 hitDirection = playerPosition + new Vector3(cameraForward.x, 0, cameraForward.z) * _currentHitForce;
+            Vector3 hitDirection = playerPosition + new Vector3(cameraForward.x, 0, cameraForward.z) * actualHitForce;
             _lineRenderer.SetPosition(1, hitDirection);
 
             // Lock Y position while allowing horizontal rotation
@@ -127,7 +127,8 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Course")) return;
-        _rigidbody.velocity = Vector3.zero;
         transform.position = lastStillStandingPosition;
+        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;
     }
 }
