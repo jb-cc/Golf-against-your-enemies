@@ -16,7 +16,7 @@ public class FractalTree : MonoBehaviour
 
     public Material trunkMaterial; // Material for the trunk
     public Material leafMaterial; // Material for the leaves
-    
+    public GameObject branchPrefab; // Prefab for the branches
 
     void Start()
     {
@@ -80,7 +80,8 @@ void Update()
     {
         for (int i = 0; i < branches; i++)
         {
-            GameObject childObj = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+            GameObject childObj = Instantiate(branchPrefab, new Vector3(0,0,0), Quaternion.identity);
+            
             childObj.transform.SetParent(this.transform, false);
 
             if (depth > 0)

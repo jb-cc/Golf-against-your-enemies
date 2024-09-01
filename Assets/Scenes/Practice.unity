@@ -289,11 +289,11 @@ PrefabInstance:
       objectReference: {fileID: 172468658}
     - target: {fileID: 8939336447267339730, guid: 2846f4fc6c2af3e469f30ce963c4b6c3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3901874
+      value: 0.39018732
       objectReference: {fileID: 0}
     - target: {fileID: 8939336447267339730, guid: 2846f4fc6c2af3e469f30ce963c4b6c3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0752418
+      value: 0.075241804
       objectReference: {fileID: 0}
     - target: {fileID: 8939336447267339730, guid: 2846f4fc6c2af3e469f30ce963c4b6c3, type: 3}
       propertyPath: m_LocalRotation.y
@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8939336447267339730, guid: 2846f4fc6c2af3e469f30ce963c4b6c3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.17375512
+      value: -0.17375515
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -967,15 +967,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba78f15eefd69f4aaae66d7a1b5aad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDepth: 3
+  maxDepth: 2
   childDiameterScale: 0.8
   childHeightScale: 0.8
   branchAngle: 66
-  branches: 2
+  branches: 6
   rotationSpeed: 20
   randomizeAxisRotation: 0
   trunkMaterial: {fileID: 2100000, guid: 733156674b418ea499380e211032e767, type: 2}
   leafMaterial: {fileID: 2100000, guid: a42e9a61d65987c47bfd9f9d334a2196, type: 2}
+  branchPrefab: {fileID: 800776264}
+--- !u!1 &800776264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6770821133729758668, guid: 49a222b06343c1b478e144dd7d8890a6, type: 3}
+  m_PrefabInstance: {fileID: 2075095646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &877512729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1672,6 +1678,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: fd1346abbd8347047b6239466975e27b, type: 2}
+    - target: {fileID: 7649161849667878900, guid: 49a222b06343c1b478e144dd7d8890a6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8792231962828294042, guid: 49a222b06343c1b478e144dd7d8890a6, type: 3}
       propertyPath: m_IsTrigger
       value: 1
