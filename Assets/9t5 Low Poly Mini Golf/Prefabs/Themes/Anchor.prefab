@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5832016500052283025}
   m_Layer: 0
   m_Name: Anchor
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4622152380605117058}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fd1346abbd8347047b6239466975e27b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

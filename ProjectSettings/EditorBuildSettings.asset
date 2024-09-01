@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: e6bac0018244c4e4e8c29f7704f15f4a
   - enabled: 1
     path: Assets/Scenes/Menu.unity
-    guid: 4ed55004dbcd73a41824ed03d0b73a74
+    guid: 83272a899b2e95d4aa8a06354352bf0a
   - enabled: 1
     path: Assets/Scenes/Practice.unity
     guid: 7fe59d0c631593e40b4fedcf214f45c0
@@ -31,5 +31,11 @@ EditorBuildSettings:
     guid: 922ff99638e51914ea97b569e8cd9ff5
   - enabled: 1
     path: Assets/Scenes/6.unity
+    guid: dce860874a93daa489aa0aeb17993952
+  - enabled: 1
+    path: Assets/Scenes/7.unity
     guid: 6a5001ad76e13ef4f85e78d0c9964cb9
+  - enabled: 1
+    path: Assets/Scenes/8.unity
+    guid: 71aae0c36a907994bb01048f17228e38
   m_configObjects: {}

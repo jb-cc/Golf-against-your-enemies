@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI totalScoreText;
     [SerializeField] private TextMeshProUGUI hitCounterText;
     public int CurrentLevel { get; private set; } = 1;
-    public int TotalLevels { get; private set; } = 12;
+    public int TotalLevels { get; private set; } = 8;
     public bool GameWon { get; private set; } = false;
     public Dictionary<string, int> HitCounter { private set; get; } = new Dictionary<string, int>();
     public int maxHitsPerLevel = 12;
@@ -176,6 +176,7 @@ public class GameManager : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
+        CurrentLevel = 1;
         _startMenu.SetActive(true);
         _pauseMenu.SetActive(false);
         _strokeCounter.SetActive(false);
@@ -185,8 +186,9 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        CurrentLevel ++;
         RefreshScoreboard();
-        if (CurrentLevel >= TotalLevels)
+        if (CurrentLevel > TotalLevels)
         {
             StartCoroutine(GameFinished());
         }
@@ -201,7 +203,6 @@ public class GameManager : MonoBehaviour
         _scoreboard.SetActive(true);
         yield return new WaitForSeconds(2);
         hitCounterText.text = "0";
-        CurrentLevel++;
         SceneManager.LoadScene((CurrentLevel).ToString());
         Debug.Log("Loading Level " + (CurrentLevel));
         _scoreboard.SetActive(false);
@@ -253,6 +254,7 @@ public class GameManager : MonoBehaviour
     {
         if (HitCounter["Level " + CurrentLevel] >= maxHitsPerLevel)
         {
+            
             HitCounter["Level " + CurrentLevel] = maxHitsPerLevel + 2;
             NextLevel();
         }
