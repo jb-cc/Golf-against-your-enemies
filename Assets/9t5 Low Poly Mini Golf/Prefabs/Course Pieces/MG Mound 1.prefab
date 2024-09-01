@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2817605325459130281}
   - component: {fileID: 71725904839930723}
   - component: {fileID: 6133114137426354613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Mound 1
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8067394503104483749}
   - component: {fileID: 5193164697765651823}
   - component: {fileID: 6930449817924140274}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG End Hole
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

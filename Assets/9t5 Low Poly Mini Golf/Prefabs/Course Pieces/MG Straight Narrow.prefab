@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2699911627078068758}
   - component: {fileID: 188293668812070620}
   - component: {fileID: 5518773228044857932}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Straight Narrow
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

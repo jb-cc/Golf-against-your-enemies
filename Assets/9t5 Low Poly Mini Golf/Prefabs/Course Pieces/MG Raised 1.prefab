@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 326085730266039727}
   - component: {fileID: 2549752585380966757}
   - component: {fileID: 5808116804735338336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Raised 1
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

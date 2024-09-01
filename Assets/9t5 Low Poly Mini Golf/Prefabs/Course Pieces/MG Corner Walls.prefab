@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 58298011336379641}
   - component: {fileID: 2822607918371829811}
   - component: {fileID: 3171434737020259010}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Corner Walls
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

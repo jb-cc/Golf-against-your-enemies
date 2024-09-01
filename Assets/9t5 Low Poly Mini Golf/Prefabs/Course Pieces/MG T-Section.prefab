@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2417714743234415996}
   - component: {fileID: 462047729408194998}
   - component: {fileID: 7906596726708561656}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG T-Section
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7143211784465203825}
   - component: {fileID: 4955435187904067259}
   - component: {fileID: 9015621792535108360}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Rounded Hole
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

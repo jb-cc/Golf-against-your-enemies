@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4816279178778790479}
   - component: {fileID: 7291938218338467461}
   - component: {fileID: 4069772416799529958}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Straight Rounded
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

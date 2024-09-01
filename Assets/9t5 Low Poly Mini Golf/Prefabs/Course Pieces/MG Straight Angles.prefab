@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8705014435893173040}
   - component: {fileID: 6857464682196742138}
   - component: {fileID: 920715197740382146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Straight Angles
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

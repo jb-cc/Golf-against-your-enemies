@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 294452831039750623}
   - component: {fileID: 2590392236662027541}
   - component: {fileID: 4326854956976156239}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Curve 1
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

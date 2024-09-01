@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1423747514728637549}
   - component: {fileID: 3757934599748849831}
   - component: {fileID: 2284845433176923443}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Ramp Narrow 1
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

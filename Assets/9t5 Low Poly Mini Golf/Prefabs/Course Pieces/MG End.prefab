@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7697376243681711320}
   - component: {fileID: 5563746130371354642}
   - component: {fileID: 7744097800889578067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG End
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3828289602165198845}
   - component: {fileID: 1352247937860647735}
   - component: {fileID: 3331512829804611301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Short Entry Dual
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

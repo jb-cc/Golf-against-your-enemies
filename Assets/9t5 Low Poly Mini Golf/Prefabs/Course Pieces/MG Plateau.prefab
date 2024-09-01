@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8557040574677212785}
   - component: {fileID: 5846868967971203771}
   - component: {fileID: 4951283332137865774}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Plateau
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

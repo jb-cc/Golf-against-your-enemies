@@ -122,6 +122,8 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Course")) return;
         transform.position = lastStillStandingPosition;
+        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;
     }
 
     private void OnCollisionEnter(Collision other)

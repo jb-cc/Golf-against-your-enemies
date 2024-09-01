@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1541093687171080718}
   - component: {fileID: 3641133648314177220}
   - component: {fileID: 509776507130239463}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Rectangle Obstacle
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

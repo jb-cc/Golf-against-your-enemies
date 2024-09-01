@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5222974391536456951}
   - component: {fileID: 8043231850051592253}
   - component: {fileID: 2296722878947050571}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MG Pit 2
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
