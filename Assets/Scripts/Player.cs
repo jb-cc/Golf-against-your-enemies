@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Course")) return;
-        transform.position = lastStillStandingPosition;
+        SetNewPosition(lastStillStandingPosition);
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
     }
@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Course")) return;
-        transform.position = lastStillStandingPosition;
+        SetNewPosition(lastStillStandingPosition);
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
     }

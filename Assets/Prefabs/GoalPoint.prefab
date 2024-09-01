@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1590675156738955951}
   m_Layer: 0
   m_Name: GoalPoint
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

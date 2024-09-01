@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4858212959142608237}
   m_Layer: 0
   m_Name: Starting Mat
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

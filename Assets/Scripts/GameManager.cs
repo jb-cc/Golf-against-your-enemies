@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI totalScoreText;
     [SerializeField] private TextMeshProUGUI hitCounterText;
     public int CurrentLevel { get; private set; } = 1;
-    public int TotalLevels { get; private set; } = 13;
+    public int TotalLevels { get; private set; } = 12;
     public bool GameWon { get; private set; } = false;
     public Dictionary<string, int> HitCounter { private set; get; } = new Dictionary<string, int>();
     public int maxHitsPerLevel = 12;
@@ -110,6 +110,12 @@ public class GameManager : MonoBehaviour
         _startMenu.SetActive(false);
         _levelSelectionMenu.SetActive(true);
         Time.timeScale = 1;
+        
+        // Reset the hit Counter
+        for (int i=1; i<=TotalLevels; i++)
+        {
+            HitCounter["Level " + i] = 0;
+        }
     }
 
     public void StartIslandsLevel()
@@ -180,19 +186,14 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         RefreshScoreboard();
-        if (GameWon)
-        {
-            Debug.Log("In NextLevel(): Game Won, No more levels to load");
-            return;
-        }
         if (CurrentLevel >= TotalLevels)
         {
-            Debug.Log("In NextLevel(): No more levels to load, calling WinGame()");
-            WinGame();
-            return;
+            StartCoroutine(GameFinished());
         }
-        
-        StartCoroutine(LoadNextLevel());
+        else
+        {
+            StartCoroutine(LoadNextLevel());
+        }
     }
     
     IEnumerator LoadNextLevel()
@@ -200,20 +201,17 @@ public class GameManager : MonoBehaviour
         _scoreboard.SetActive(true);
         yield return new WaitForSeconds(2);
         hitCounterText.text = "0";
-        
-        SceneManager.LoadScene((CurrentLevel + 1).ToString());
-        Debug.Log("Loading Level " + (CurrentLevel + 1));
         CurrentLevel++;
+        SceneManager.LoadScene((CurrentLevel).ToString());
+        Debug.Log("Loading Level " + (CurrentLevel));
         _scoreboard.SetActive(false);
     }
 
-    public void WinGame()
+    IEnumerator GameFinished()
     {
-        if (!GameWon)
-        {
-            GameWon = true;
-            SceneManager.LoadScene("Win");
-        }
+        _scoreboard.SetActive(true);
+        yield return new WaitForSeconds(2);
+        MainMenu();
     }
 
     public void IncreaseHitCounter()
@@ -255,6 +253,7 @@ public class GameManager : MonoBehaviour
     {
         if (HitCounter["Level " + CurrentLevel] >= maxHitsPerLevel)
         {
+            HitCounter["Level " + CurrentLevel] = maxHitsPerLevel + 2;
             NextLevel();
         }
     }
