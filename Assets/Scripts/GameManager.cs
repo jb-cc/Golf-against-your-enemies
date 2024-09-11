@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 { 
     public static GameManager Instance { get; private set; }
-
     private EventSystem _eventSystem;
     private GameObject _canvas;
     private GameObject _startMenu;
